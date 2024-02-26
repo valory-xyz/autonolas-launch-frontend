@@ -1,40 +1,12 @@
 [
   {
-    "id": "prediction-agents-mechs-ai-tool",
-    "name": "Mechs AI Tool",
-    "description": "Create new tools on the Mechs  marketplace. Improve Prediction Agents’ prediction accuracy.",
-    "service": {
-      "id": "prediction-agents",
-      "name": "Prediction Agents",
-      "url": "https://olas.network/services/prediction-agents"
-    },
-    "isMechsToolPath": true,
-    "markdownPath": "paths-markdown/prediction-agents-mechs-ai-tool.md"
+    "id": "start-from-a-kit",
+    "name": "Start from a kit",
+    "description": "Select from a range of pre-built kits. Make it your own, launch it and bring it to market."
   },
   {
-    "id": "prediction-agents-trading-strategy",
-    "name": "Trading Strategy",
-    "description": "Craft new strategies to help Prediction Agents win prediction markets.",
-    "service": {
-      "id": "prediction-agents",
-      "name": "Prediction Agents",
-      "url": "https://olas.network/services/prediction-agents"
-    },
-    "isMechsToolPath": false,
-    "markdownPath": "paths-markdown/prediction-agents-trading-strategy.md"
-  },
-  {
-    "id": "general-mechs-tool",
-    "name": "General Mechs Tool",
-    "description": "Add to the Mechs AI tools marketplace for agents.",
-    "isMechsToolPath": true,
-    "markdownPath": "paths-markdown/general-mechs-tool.md"
-  },
-  {
-    "id": "build-your-own-service",
-    "name": "Build your own service",
-    "description": "Build a full autonomous service from the ground up.",
-    "isMechsToolPath": false,
-    "markdownPath": "paths-markdown/build-your-own-service.md"
+    "id": "launch-your-own-idea",
+    "name": "Launch your own idea",
+    "description": "Take your market insight and turn it into a full-fledged service."
   }
 ]
