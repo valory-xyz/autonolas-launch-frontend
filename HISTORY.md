@@ -1,1 +1,1 @@
-# Release History - `autonolas-build-frontend`
+# Release History - `autonolas-launch-frontend`

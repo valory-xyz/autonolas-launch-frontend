@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  Row, Card, Col, Button, Typography, Tag, Grid,
+  Row, Card, Col, Button, Typography, Grid,
 } from 'antd';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
@@ -88,9 +88,6 @@ const PathCard = ({ path }) => {
 
             )
           }
-          <Tag className="mb-4" color="success">
-            Rewards available
-          </Tag>
           <div className="mb-12" style={{ minHeight: '100px' }}>
             <Typography.Paragraph ellipsis={{ rows: 3, expandable: true }}>
               {description}
@@ -150,13 +147,12 @@ export const Paths = () => {
                 </Typography.Title>
                 <div className="mb-16">
                   <Typography.Text type="secondary">
-                    Submit a PR to the repo to guide developers towards useful
-                    code contributions.
+                    Submit a PR to the repo to guide Launchers towards valuable services.
                   </Typography.Text>
                 </div>
                 <Button
                   type="default"
-                  href="https://github.com/valory-xyz/autonolas-build-frontend?tab=readme-ov-file#add-your-own-path"
+                  href="https://github.com/valory-xyz/autonolas-launch-frontend?tab=readme-ov-file#add-your-own-path"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

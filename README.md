@@ -34,5 +34,5 @@ Clone down this repository. You will need `node` version `">=18"` and `yarn` ver
 
 ## Add your own Path
 
-- First, design your Path for developers to follow.
+- First, design your Path for Launchers to follow.
 - Then, submit a PR to this repository, adding your path to components/Paths/data.json

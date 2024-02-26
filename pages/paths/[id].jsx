@@ -32,14 +32,12 @@ const PathDetailPage = () => {
 
   useEffect(() => {
     const fetchMarkdown = async () => {
-      if (pathData?.markdownPath) {
-        try {
-          const response = await fetch(`/${pathData.markdownPath}`);
-          const text = await response.text();
-          setMarkdownContent(text);
-        } catch (error) {
-          console.error('Error fetching markdown:', error);
-        }
+      try {
+        const response = await fetch(`/paths-markdown/${id}.md`);
+        const text = await response.text();
+        setMarkdownContent(text);
+      } catch (error) {
+        console.error('Error fetching markdown:', error);
       }
     };
     fetchMarkdown();
@@ -110,106 +108,6 @@ const PathDetailPage = () => {
               </Col>
             </Row>
           </section>
-          {pathData.service && (
-            <section className="mb-16" id="service">
-              <div className="mb-8">
-                <Upcase>Service</Upcase>
-              </div>
-              <Row
-                gutter={[16, 16]}
-                align="middle"
-                style={{ maxWidth: '500px' }}
-              >
-                <Col span={8}>
-                  <Image
-                    src={`/images/services/${pathData?.service?.id}.png`}
-                    alt={pathData.service.name}
-                    width={200}
-                    height={200}
-                    layout="intrinsic"
-                    style={{
-                      borderRadius: '5px',
-                      border: `1px solid ${COLOR.BORDER_GREY}`,
-                    }}
-                  />
-                </Col>
-                <Col span={16}>
-                  <Typography.Paragraph>
-                    This tool contributes to the
-                    {' '}
-                    <a
-                      href={pathData.service.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {pathData.service.name}
-                      &nbsp;↗
-                    </a>
-                    {' '}
-                    service.
-                  </Typography.Paragraph>
-                </Col>
-              </Row>
-            </section>
-          )}
-          <section className="mb-16" id="rewards">
-            <div className="mb-8">
-              <Upcase>Rewards</Upcase>
-            </div>
-            <Row gutter={[16, 16]} align="middle" style={{ maxWidth: '500px' }}>
-              <Col span={8}>
-                <Image
-                  src="/images/rewards.png"
-                  alt="Eligible for Olas Build Rewards"
-                  width={200}
-                  height={200}
-                  layout="intrinsic"
-                  style={{
-                    borderRadius: '5px',
-                    border: `1px solid ${COLOR.BORDER_GREY}`,
-                  }}
-                />
-              </Col>
-              <Col span={16}>
-                <Typography.Paragraph>
-                  Completing this path will make you eligible for Build Rewards.
-                </Typography.Paragraph>
-              </Col>
-            </Row>
-          </section>
-          {pathData.isMechsToolPath && (
-            <section className="mb-16" id="is-mechs-tool-path">
-              <div className="mb-8">
-                <Upcase>Mechs Tool</Upcase>
-              </div>
-              <Row
-                gutter={[16, 16]}
-                align="middle"
-                style={{ maxWidth: '500px' }}
-              >
-                <Col span={8}>
-                  <Image
-                    src="/images/mechs.png"
-                    alt="Eligible for Olas Build Rewards"
-                    width={200}
-                    height={200}
-                    layout="intrinsic"
-                    style={{
-                      borderRadius: '5px',
-                      border: `1px solid ${COLOR.BORDER_GREY}`,
-                    }}
-                  />
-                </Col>
-                <Col span={16}>
-                  <Typography.Paragraph>
-                    This path is for building a Mechs tool. Mechs is a
-                    marketplace for agents to easily use AI tools via a
-                    blockchain.
-                  </Typography.Paragraph>
-                </Col>
-              </Row>
-            </section>
-          )}
         </Col>
       </Row>
     </>
