@@ -1,4 +1,4 @@
-1. Identify a market need that can be served by an autonomous service.
+1. Identify a market need that can be served by an [autonomous service](https://olas.network/learn#what-are-autonomous-services).
 1. Spec your service out.
 1. Assign developers within your organization to build the service, or join Olas Academy to get connected with community developers.
 1. Coordinate the development and testing of your service.
